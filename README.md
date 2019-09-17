@@ -4,7 +4,7 @@ Arquitetura de Dados para POC de saúde.
 
 ## Tarefas
 
-- [ ] Criar desenho da arquitetura de dados
+- [X] Criar desenho da arquitetura de dados
 - [ ] Documentar arquitetura fase a fase
 - [ ] Criar DER da modelagem relacional
 - [ ] Criar rotina de consumo de dados
