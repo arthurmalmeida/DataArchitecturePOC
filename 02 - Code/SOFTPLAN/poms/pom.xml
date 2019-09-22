@@ -12,6 +12,7 @@
     <module>code/routines</module>
     <module>jobs/process/upload/upload_data_0.1</module>
     <module>jobs/process/raw_data/beneficiarios_0.1</module>
+    <module>jobs/process/raw_data/custos_0.1</module>
   </modules>
   <properties>
     <talend.project.name>SOFTPLAN</talend.project.name>

@@ -1,0 +1,8 @@
+create table `intense-reason-217017`.`health_data`.`custo` (
+  cod_beneficiario string,
+  vl_total string,
+  vl_honorario string,
+  mes_competencia string,
+  cod_servico string,
+  tipo_servico string
+)
