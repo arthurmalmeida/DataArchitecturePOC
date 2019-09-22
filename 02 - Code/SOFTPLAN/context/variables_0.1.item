@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_c5rTsN2LEemP2JnkSJXE5Q" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_c5rTsd2LEemP2JnkSJXE5Q" comment="" name="access_key" prompt="access_key?" promptNeeded="false" type="id_String" value="&quot;GOOG1EWQ3RZGDEGUHV5OZP2HOMWSUISDJC6KPUAYXV5MYDWMFGCAGQM4624PI&quot;"/>
+  <contextParameter xmi:id="_c5rTst2LEemP2JnkSJXE5Q" comment="" name="secrect_key" prompt="secrect_key?" promptNeeded="false" type="id_String" value="&quot;xGifnn79EEyOSlOI/gJXiVPDMak/IvX9EzC0h1c/&quot;"/>
+  <contextParameter xmi:id="_c5rTs92LEemP2JnkSJXE5Q" comment="" name="project_id" prompt="project_id?" promptNeeded="false" type="id_String" value="&quot;intense-reason-217017&quot;"/>
+  <contextParameter xmi:id="_c5rTtN2LEemP2JnkSJXE5Q" comment="" name="raw_dataset" prompt="raw_dataset?" promptNeeded="false" type="id_String" value="&quot;health_data&quot;"/>
+  <contextParameter xmi:id="_c5rTtd2LEemP2JnkSJXE5Q" comment="" name="temp_directory" prompt="temp_directory?" promptNeeded="false" type="id_String" value="&quot;E:/Softplan/temp/&quot;"/>
+  <contextParameter xmi:id="_c5rTtt2LEemP2JnkSJXE5Q" comment="" name="file_directory" prompt="file_directory?" promptNeeded="true" type="id_String" value="&quot;E:/Softplan/files/&quot;"/>
+  <contextParameter xmi:id="_c5rTt92LEemP2JnkSJXE5Q" comment="" name="credentials_file" prompt="credentials_file?" promptNeeded="false" type="id_String" value="&quot;E:/Softplan/credentials/intense-reason-217017-06d7e29ac3ac.json&quot;"/>
+</talendfile:ContextType>
