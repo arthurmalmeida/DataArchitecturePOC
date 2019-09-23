@@ -5,7 +5,7 @@
     <contextParameter comment="" name="credentials_file" prompt="credentials_file?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;E:/Softplan/credentials/intense-reason-217017-06d7e29ac3ac.json&quot;"/>
     <contextParameter comment="" name="project_id" prompt="project_id?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;intense-reason-217017&quot;"/>
     <contextParameter comment="" name="raw_dataset" prompt="raw_dataset?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;health_data&quot;"/>
-    <contextParameter comment="" name="secrect_key" prompt="secrect_key?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;xGifnn79EEyOSlOI/gJXiVPDMak/IvX9EzC0h1c/&quot;"/>
+    <contextParameter comment="" name="secret_key" prompt="secret_key?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;xGifnn79EEyOSlOI/gJXiVPDMak/IvX9EzC0h1c/&quot;"/>
     <contextParameter comment="" name="temp_directory" prompt="temp_directory?" promptNeeded="false" repositoryContextId="_c4oK0N2LEemP2JnkSJXE5Q" type="id_String" value="&quot;E:/Softplan/temp/&quot;"/>
   </context>
   <parameters>
@@ -247,7 +247,7 @@
     <elementParameter field="CLOSED_LIST" name="ACTION_ON_DATA" value="APPEND"/>
     <elementParameter field="CHECK" name="BULK_FILE_ALREADY_EXIST" value="false" show="false"/>
     <elementParameter field="TEXT" name="GS_ACCESS_KEY" value="context.access_key"/>
-    <elementParameter field="PASSWORD" name="GS_SECRET_KEY" value="8pW6Nmy2kufpCqN2c4C1Ic3qCt/e5Px5"/>
+    <elementParameter field="PASSWORD" name="GS_SECRET_KEY" value="8pW6Nmy2kufjYhxwZXC9Hu/HmfL6F/IE"/>
     <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;poc_saude&quot;"/>
     <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://poc_saude/temp/&quot;beneficiarios_bigquery.txt&quot;&quot;"/>
     <elementParameter field="TEXT" name="GS_FILE_HEADER" value="file1"/>

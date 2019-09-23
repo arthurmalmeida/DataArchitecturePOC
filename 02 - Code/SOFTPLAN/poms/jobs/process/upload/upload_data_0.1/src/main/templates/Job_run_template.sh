@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+ROOT_PATH=`pwd`
+java -Dtalend.component.manager.m2.repository=$ROOT_PATH/../lib -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -cp .:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/GoogleStorageUtils.jar:$ROOT_PATH/../lib/commons-codec-1.6.jar:$ROOT_PATH/../lib/commons-logging-1.1.3.jar:$ROOT_PATH/../lib/crypto-utils.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/httpclient-4.3.6.jar:$ROOT_PATH/../lib/httpclient-4.5.5.jar:$ROOT_PATH/../lib/httpcore-4.3.3.jar:$ROOT_PATH/../lib/httpcore-4.4.9.jar:$ROOT_PATH/../lib/jets3t-0.9.1.jar:$ROOT_PATH/../lib/log4j-1.2.17.jar:$ROOT_PATH/upload_data_0_1.jar: softplan.upload_data_0_1.upload_data  "$@"

@@ -44,11 +44,6 @@
   <dependencies>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>GoogleStorageUtils</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>commons-codec-1.6</artifactId>
       <version>6.0.0</version>
     </dependency>
@@ -69,17 +64,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>httpclient-4.3.6</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>httpclient-4.5.5</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>httpcore-4.3.3</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
