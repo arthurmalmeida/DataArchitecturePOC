@@ -249,8 +249,8 @@
     <elementParameter field="TEXT" name="GS_ACCESS_KEY" value="context.access_key"/>
     <elementParameter field="PASSWORD" name="GS_SECRET_KEY" value="8pW6Nmy2kufjYhxwZXC9Hu/HmfL6F/IE"/>
     <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;poc_saude&quot;"/>
-    <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://poc_saude/temp/&quot;beneficiarios_bigquery.txt&quot;&quot;"/>
-    <elementParameter field="TEXT" name="GS_FILE_HEADER" value="file1"/>
+    <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://poc_saude/beneficiarios_bigquery.txt&quot;"/>
+    <elementParameter field="TEXT" name="GS_FILE_HEADER" value="1"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="FILE" name="TOKEN_NAME" value="&quot;E:/Talend/TOS_DI-Win32-20190620_1446-V7.2.1/workspace/token.properties&quot;" show="false"/>
     <elementParameter field="CHECK" name="SET_FIELD_DELIMITER" value="true" show="false"/>
@@ -300,7 +300,7 @@
   </node>
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.temp_directory"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.temp_directory + &quot;beneficiarios_bigquery.txt&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend/TOS_DI-Win32-20190620_1446-V7.2.1/workspace/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;E:/Talend/TOS_DI-Win32-20190620_1446-V7.2.1/workspace/delete_folder or delete_file&quot;" show="false"/>
     <elementParameter field="CHECK" name="FAILON" value="true"/>
@@ -309,6 +309,18 @@
     <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_2" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.temp_directory + &quot;beneficiarios.csv&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend/TOS_DI-Win32-20190620_1446-V7.2.1/workspace/delete_folder&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;E:/Talend/TOS_DI-Win32-20190620_1446-V7.2.1/workspace/delete_folder or delete_file&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_2"/>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tGSConnection_1" offsetLabelX="0" offsetLabelY="0" source="tGSConnection_1" target="tGSGet_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
@@ -332,6 +344,9 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tGSDelete_1" offsetLabelX="0" offsetLabelY="0" source="tGSDelete_1" target="tFileDelete_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
@@ -339,6 +354,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGSGet_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
